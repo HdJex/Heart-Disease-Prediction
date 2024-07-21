@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block maincontent %}
+<!--Main Content Start-->
+<div class="main-content">
+  <!--Welcome Section-->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="row">
+        <div class="welcome-box">
+          <div class="col-md-6 col-sm-6">
+            <div class="welcome-text">
+              <div class="sectio-title-2"> <strong>Welcome to your</strong>
+                <h2>Heart Care</h2>
+              </div>
+              <p> Healthcare is an essential pillar of well-being that encompasses medical services, preventive care, and support for individuals and communities. It plays a vital role in maintaining and improving overall health, preventing illnesses, and ensuring timely treatment when needed. Access to quality healthcare empowers individuals to lead productive lives and contributes to the growth and stability of societies. By prioritizing healthcare, we invest in the longevity and vitality of our populations, enabling people to live their lives to the fullest.</p>
+              <strong class="signature">Shubham Salunkhe</strong>
+              <h6 class="designation">CEO of Heart Care Hospital</h6>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="welcome-img"> <img src="{% static 'heartcare/images/welcome.jpg' %}" alt=""> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Welcome Section End-->
+
+  <!--Home Services Start-->
+  <section class="home-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box">
+            <h3>Cardio Monitoring</h3>
+            <p>healthcare professionals identify irregularities in heart rhythm , monitor the effectiveness ,
+                exercise tolerance, and detect potential cardiac issues early on.</p>
+            
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box selected">
+            <h3>First Aid</h3>
+            <p>First aid is the immediate care given to someone with an injury or illness, crucial in influencing their ultimate outcome.</p>
+            <a href="contact-2.html">Contact Us</a>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="features-box">
+            <h3>Emergency Help</h3>
+            <p><span>Monday-Friday:</span> Full Day<br>
+              <span>Satuday:</span> Full Day<br>
+              <span>Sunday:</span> 7:00am - 02:00pm<br>
+            </p>
+            <a href="#">Call for Info: +7738830573</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Home Services End-->
+
+  
+
+  <!--Heart Care Start-->
+  <section class="heart-care-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title-3 white"> <strong>Our Core</strong>
+            <h2>Expert Services</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-sm-5">
+
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#service-1" aria-controls="service-1" role="tab"
+                data-toggle="tab"> <i class="fa fa-graduation-cap"></i> Experienced Cardiologists</a></li>
+            
+            <li role="presentation"><a href="#service-4" aria-controls="service-4" role="tab" data-toggle="tab"> <i
+                  class="fa fa-user-md"></i>Cardiac Rehabilitation Specialist</a></li>
+            <li role="presentation"><a href="#service-5" aria-controls="service-5" role="tab" data-toggle="tab"> <i
+                  class="fa fa-medkit"></i> Chatbot</a></li>
+            
+          </ul>
+        </div>
+        <div class="col-md-7 col-sm-7">
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="service-1">
+              <div class="ser-tab-text">
+                <h3>Experienced Cardiologists</h3>
+                <p> <i class="fa fa-graduation-cap"></i> we have experienced Cardiologists who are specialized doctors who focus on the diagnosis and treatment of heart-related conditions, playing a crucial role in promoting cardiovascular health and managing heart diseases.  </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> Their expertise covers a wide spectrum, from preventive measures to advanced interventions, ensuring optimal heart function for patients.</li>
+                  
+                </ul>
+              </div>
+            </div>
+            
+            <div role="tabpanel" class="tab-pane" id="service-4">
+              <div class="ser-tab-text">
+                <h3>Cardiac Rehabilitation Specialist</h3>
+                <p> <i class="fa fa-user-md"></i> These healthcare professionals design and oversee cardiac rehabilitation programs for patients recovering from heart surgery or managing heart conditions. These programs focus on improving overall heart health and reducing the risk of future cardiovascular events. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> effective health solutions.</li>
+                
+                </ul>
+              </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="service-5">
+              <div class="ser-tab-text">
+                <h3>Chatbot</h3>
+                <p> <i class="fa fa-medkit"></i> Healthcare chatbots are AI-driven tools designed to provide instant medical information, answer queries, and assist in appointment scheduling, offering convenient and accessible support for healthcare-related inquiries. </p>
+                <ul>
+                  <li><i class="fa fa-check"></i> They enhance patient engagement and streamline healthcare services through automated and interactive communication..</li>
+                
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Heart Care End-->
+
+
+  <!--Team Start-->
+  <section class="team">
+    <div class="container">
+      <div class="row">
+        <div class="section-title-3"> <strong>Our Team</strong>
+          <h2>Expert Team</h2>
+        </div>
+      </div>
+      <div class="row">
+        {% for doctor in experts|slice:':4' %}
+        <div class="col-md-3 col-sm-6">
+          <div class="team-box mb50">
+            <div class="team-thumb"> <a href="{% url 'doctor_details' doctor.id %}" class="view"><i class="fa fa-Heart"
+                  aria-hidden="true"></i></a> <img src="{{ doctor.picture.url }}" alt=""></div>
+            <div class="team-text">
+              <h5><a href="{% url 'doctor_details' doctor.id %}">{{ doctor.name }}</a></h5>
+              <strong>{{ doctor.speciality }}</strong>
+              <ul class="team-social">
+                {% if doctor.twitter %}
+                <li><a class="tw" href="{{ doctor.twitter }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                {% endif %}
+                {% if doctor.facebook %}
+                <li><a class="fb" href="{{ doctor.facebook }}"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                {% endif %}
+                {% if doctor.instagram %}
+                <li><a class="insta" href="{{ doctor.instagram }}"><i class="fa fa-instagram"
+                      aria-hidden="true"></i></a></li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <!--Team End-->
+
+
+  <!--Testimonials + Faqs Start-->
+  <section class="testi-faq">
+    <div class="container">
+      <div class="row">
+
+        <!--Testimonials Start-->
+        <div class="col-md-6">
+          <div class="home-testimonials">
+            <div class="sectio-title-2"> <strong>Read What Says Our</strong>
+              <h2>Happy Patients</h2>
+            </div>
+            <div id="testimonial-slider" class="owl-carousel owl-theme">
+
+              <!--Slider Start-->
+              <div class="item">
+                <div class="testimonial-holder">
+                  <div class="user-thumb"> <img src="{% static 'heartcare/images/tuser.jpeg' %}" alt=""> <strong>Kamini Shinde</strong>
+                    <i>A heart patient</i> </div>
+                  <div class="test-text">
+                    <p>The care I received as a heart patient was exceptional, combining expert medical guidance with genuine compassion, ultimately giving me a renewed sense of hope and health. Grateful for the dedicated team that supported my journey to recovery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-holder">
+                  <div class="user-thumb"> <img src="{% static 'heartcare/images/tuser-2.jpg' %}" alt=""> <strong>Shridhar Patil</strong>
+                    <i>A Heart disease patient</i> </div>
+                  <div class="test-text">
+                    <p>The Cardiotology team's expertise not only treated my condition but also restored my self-confidence, making every step towards healthier Heart feel like a positive transformation. Their personalized care and effective solutions exceeded my expectations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+
+              <!--Slider End-->
+
+            </div>
+          </div>
+        </div>
+        <!--Testimonials End-->
+
+        <!--FAQ Start-->
+        <div class="col-md-6">
+          <div class="home-faq">
+            <div class="sectio-title-2"> <strong>Feel Free For</strong>
+              <h2>Any FAQ’s</h2>
+            </div>
+            <div class="faqs">
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                        href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> How much you charge
+                        for consultancy </a> </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">Its totally free of cost </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What kind of patients do you treat? </a> </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body"> Our commercialization strategy involves a rapid development of
+                      treatments for both heart related diseases as wll as for skin related diseases </div>
+                  </div>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree"> What about the medcine ecommerce? </a> </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                    aria-labelledby="headingThree">
+                    <div class="panel-body">  the medicine ecommerce platform—effortless ordering process coupled with timely delivery, ensuring my health needs are met conveniently. A reliable source I can trust for my medical supplies </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FAQ End-->
+
+      </div>
+    </div>
+  </section>
+  <!--Testimonials + Faqs End-->
+
+</div>
+<!--Main Content End-->
+{% endblock maincontent %}

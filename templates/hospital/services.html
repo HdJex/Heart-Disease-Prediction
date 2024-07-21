@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Commerce Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    nav {
+        background-color: #555;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    section {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .product {
+        text-align: center;
+        border: 1px solid #b3a5a5;
+        padding: 10px;
+        border-radius: 5px;
+        
+    }
+    .product img {
+        max-width: 100%;
+        height: auto;
+    }
+    .product h2 {
+        margin-top: 10px;
+    }
+    .product p {
+        color: #777;
+    }
+    .product strong {
+        color: #df001a;
+    }
+    .product button {
+        background-color: #df001a;
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .product button:hover {
+        background-color: #c70011;
+    }
+    footer {
+        background-color: #333;
+        color: #eefc71;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our medE-Commerce Store</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="product">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/5/CU/SL/WY/33567294/crocin-advance-tablet-500x500.jpg" alt="Product 1">
+            <h2>crocin</h2>
+            <p>It is used for the treatment of fever. It also provides relief from headache, toothache, backache, nerve pain, musculoskeletal pain, etc. associated with/without fever. Crocin Advance Tablet works by decreasing the intensity of pain signals to the brain.</p>
+            <p><strong>Price: $99.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://familyneeds.co.in/cdn/shop/products/1_f377f47c-90b9-4454-abe1-7f788eb17e79_600x600.jpg?v=1598635522" alt="Product 2">
+            <h2>hajmola</h2>
+            <p>Dabur Hajmola Tasty Digestive Tablets (Imli Flavour) Healthy, Tasty & Chatpata,Ayurvedic Tablets For Improved Digestion, Relief From Flatulence</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product">
+          <img src="https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F922%2Fversiti-real-medicine-pack-of-60-capsules-141.jpg&w=384&q=75" alt="Product 1">
+          <h2>Versiti</h2>
+          <p>Versiti real medicine real relief from dizziness head spinning vomitting pack of 60 capsules is an herbal product with its own secret formulation designed to provide fast and natural relief from symptoms like nausea, vomiting, dizziness and lack of appetite</p>
+          <p><strong>Price: $199.99</strong></p>
+          <button>Add to Cart</button>
+      </div>
+      <div class="product">
+          <img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/cropped/mu5bahqxfrp28cut6que.jpg" alt="Product 2">
+          <h2>Dolo 650</h2>
+          <p>Dolo 650 has 650 MG of paracetamol is also called Acetaminophen. It comes under non-steroidal anti-inflammatory drugs (NSAIDs) drug class. Paracetamol has antipyretic and analgesic, which helps in decreasing fever and pain, and it has a minimal anti-inflammatory action.</p>
+          <p><strong>Price: $149.99</strong></p>
+          <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/fi3jpcf0hyciuw4oy3tf.jpg" alt="Product 1">
+        <h2>Soframycin</h2>
+        <p>Soframycin is an antibiotic used to treat bacterial infection. It prevents bacteria from growing on your skin and is available in a topical cream and topical and nasal ointment. It is used to treat infected wounds, minor burns, and cuts.</p>
+        <p><strong>Price: $99.99</strong></p>
+        <button>Add to Cart</button>
+    </div>
+   
+  <div class="product">
+      <img src="https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F560%2Fbenadryl-plastic-cough-medicine-syrup-088.jpg&w=384&q=75" alt="Product 2">
+      <h2>Benadryl</h2>
+      <p>Benadryl is an antihistamine used to relieve symptoms of allergy, hay fever, and the common cold. These symptoms include rash, itching, watery eyes, itchy eyes/nose/throat, cough, runny nose, and sneezing. It is also used to prevent and treat nausea, vomiting and dizziness caused by motion sickness.</p>
+      <p><strong>Price: $149.99</strong></p>
+      <button>Add to Cart</button>
+  </div>
+    </section>
+    <section>
+        <div class="product">
+            <img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=100358150-847&recipeName=680" alt="Product 2">
+            <h2>NeilMed Sinus Rinse Kit</h2>
+            <p>NeilMed Sinus Rinse Kit is used to treat stuffy nose, post-nasal drip, dryness inside your nose and nasal passages, or nasal irritation caused by colds, flu, allergies, or pollutants. This product contains a purified gentle salt solution also called saline.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&imageId=536099-847__1&recipeName=350" alt="Product 2">
+            <h2>Allergy Medicine</h2>
+            <p>Allergies used when allergies occur when your immune system reacts to a foreign substance such as pollen, bee venom or pet dander or a food that doesn't cause a reaction in most people. Your immune system produces substances known as antibodies.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://www.zyrtec.com/sites/zyrtec_us/files/styles/product_carousel_desktop/public/product-images/1_zyrtec-allergy-dye-free-chewable.webp?timestamp=1680526939" alt="Product 2">
+            <h2>ZYRTEC® Dye-Free Chewable </h2>
+            <p>Each allergy chewable contains 10 mg cetirizine antihistamine to help relieve your worst seasonal and other upper respiratory allergy symptoms such as runny nose, sneezing, watery and itchy eyes, and itchy nose and throat. These chewable tablets are easy to take on-the-go with or without water.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/12/IB/ZB/MJ/15666310/soma-350-mg-tablets-250x250.jpg" alt="Product 2">
+            <h2>Soma 500 Mg Tablets</h2>
+            <p>Soma is a muscle relaxer that blocks pain sensations between the nerves and the brain. Soma is used together with rest and physical therapy to treat skeletal muscle conditions such as pain or injury.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        
+        <div class="product">
+            <img src="https://richmedia.ca-richimage.com/ImageDelivery/imageService?profileId=12026540&id=1848590&recipeId=729" alt="Product 2">
+            <h2>Oral-B iO 5 Brilliant Clean Electric Toothbrush</h2>
+            <p>Clinically Proven 100% Cleaner teeth & healthier gums in 1 week versus a regular manual toothbrush. The i05 coaches you to a perfect clean with a Smart Display, this is real time personalized coaching. The accompanying App detects the position through Artificial Intelligence.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&itemId=1649376-847&recipeName=680" alt="Product 2">
+            <h2>Crest 3D White Advanced Whitening Toothpaste</h2>
+            <p>Brighten your smile with Crest 3D White Advanced Whitening Toothpaste. It removes up to 100% of surface stains and features 24 Hour Stain Prevention Technology* *surface stains with twice daily brushing. Brief content visible, double tap to read full content.</p>
+            <p><strong>Price: $149.99</strong></p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+    <footer>
+        &copy; 2023 med-Commerce Store. All rights reserved.
+    </footer>
+</body>
+</html>

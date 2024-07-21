@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Registration</title>
+    <style>
+        body {
+            background-image: url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm373batch15-217-01.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=d8bbc66e02e81095950de55fcc9347f5');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: 'Arial', sans-serif;
+            background-color: rgba(0,0,0,0);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        .container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+        
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .error {
+            color: #ff0000;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <form id="registrationForm" onsubmit="return validateRegistration()">
+            <h2>Registration</h2>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <div id="passwordError" class="error"></div>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div id="confirmPasswordError" class="error"></div>
+
+            <input type="submit" value="Login" onclick="redirect()">
+            
+            <!-- Anchor tag acting like a button -->
+            <a href="login1.html" class="button-link"></a>
+        
+        </form>
+    </div>
+    <script>
+        function redirect() {
+            // Add any additional logic or validation before redirecting
+            window.location.href = "target-page.html";
+        }
+    </script>
+    <script >
+        function validateRegistration() {
+            // Basic client-side validation
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+        
+            const usernameError = document.getElementById('usernameError');
+            const emailError = document.getElementById('emailError');
+            const passwordError = document.getElementById('passwordError');
+            const confirmPasswordError = document.getElementById('confirmPasswordError');
+        
+            // Reset error messages
+            usernameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+        
+            if (!username || !email || !password || !confirmPassword) {
+                alert('All fields must be filled out');
+                return false;
+            }
+        
+            if (password !== confirmPassword) {
+                confirmPasswordError.textContent = 'Passwords do not match';
+                return false;
+            }
+        
+            return true;
+        }
+    </script>
+</body>
+</html>
